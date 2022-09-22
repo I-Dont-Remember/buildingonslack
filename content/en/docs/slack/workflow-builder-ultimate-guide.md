@@ -21,3 +21,5 @@ toc: true
 
 ## Developing Workflow Steps
 
+
+![text for image](/images/impostor-syndrome-visualized.png)
