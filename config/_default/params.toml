@@ -22,11 +22,11 @@ twitterCreator = "@maybekq"
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "Building on Slack"
+schemaAuthor = "Kevin Quinn"
+schemaAuthorTwitter = "https://twitter.com/maybekq"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/quinnkevinp/"
+schemaAuthorGitHub = "https://github.com/i-dont-remember/"
 schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
 schemaLogoWidth = 512
@@ -36,7 +36,7 @@ schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/maybekq"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaGitHub = "https://github.com/i-dont-remember/"
 schemaSection = "blog"
 
 ## Sitelinks Search Box

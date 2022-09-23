@@ -1,0 +1,6 @@
+{{/* https://github.com/h-enk/doks/discussions/877 */}}
+{{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
+
+<div class="text-center">
+    <img class="img-simple img-fluid{{ with .Get "class" }} {{.}}{{ end }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+</div>
