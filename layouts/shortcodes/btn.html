@@ -1,0 +1,10 @@
+
+<!-- <a class="btn btn-primary btn-lg px-4 mb-2"  -->
+<a class="btn{{ with .Get "class" }} {{.}}{{ end }}" 
+    href="{{with .Get "href" }}{{ . }}{{ end }}"
+    {{ if ( .Get "newTab") }}
+        target="_blank"
+    {{ end }}
+    role="button">
+{{with .Get "label" }}{{ . }}{{ end }}
+</a>
