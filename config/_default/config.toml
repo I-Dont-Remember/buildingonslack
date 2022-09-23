@@ -1,4 +1,4 @@
-baseUrl = "https://new-buildingonslack.netlify.app/"
+baseUrl = "https://buildingonslack.com"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
