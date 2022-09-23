@@ -24,6 +24,9 @@ Fun fact! Workflow Builder was originally a [Slack app called Missions](https://
 
 ## Developing Workflow Steps
 
+## Examples & templates
+
+See [Workflow Builder Templates](/docs/slack/workflow-builder-templates/).
 
 ## Resources & articles
 

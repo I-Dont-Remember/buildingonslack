@@ -26,4 +26,4 @@ Every business is different, but it can help to know how others have blazed the 
 - Pull Panda -acquired by Github [https://www.indiehackers.com/interview/from-idea-to-profitable-business-on-the-github-marketplace-and-slack-a6ef7d420a](https://www.indiehackers.com/interview/from-idea-to-profitable-business-on-the-github-marketplace-and-slack-a6ef7d420a)
 - Creator of Abot [https://pawelurbanek.com/profitable-slack-bot-rails](https://pawelurbanek.com/profitable-slack-bot-rails)
     - 10k in Profit [https://pawelurbanek.com/side-project-profit](https://pawelurbanek.com/side-project-profit)
-- [- https://thinkgrowth.org/building-on-slack-saved-our-startup-94953fdaf27a](- https://thinkgrowth.org/building-on-slack-saved-our-startup-94953fdaf27a)
+- [thinkgrowth.org/building-on-slack-saved-our-startup-94953fdaf27a](https://thinkgrowth.org/building-on-slack-saved-our-startup-94953fdaf27a)
