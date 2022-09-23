@@ -2,8 +2,8 @@
 title: Workflow Builder Templates
 description: Slack Workflow Builder Templates to empower your team.
 lead: ''
-date: 2022-09-23T12:13:00.000-05:00
-lastmod: 2022-09-23T12:13:00.000-05:00
+date: 2022-09-23T17:13:00+00:00
+lastmod: 2022-09-23T17:13:00+00:00
 images:
 - "/images/shared-inbox-workflow.png"
 weight: "111"
@@ -12,11 +12,16 @@ toc: true
 ---
 Slack workflow templates to get you up and running with useful tools in no time. Still trying to understand what the heck Workflow Builder is? Head over to the [Workflow Builder Guide](/docs/slack/workflow-builder-ultimate-guide/) to dive deeper.
 
-## How to install a Workflow Builder Template
+## How to install a Slack Workflow Builder template
 
-Templates are only as useful if you are able to easily use them. To get a Workflow Builder template enabled on your workspace...
+Templates are only as useful if you are able to easily use them. To get a Workflow Builder template enabled on your workspace:
 
-< fill this out >
+1. Download your desired template file, will either end in `.workflow` or `.json`.
+2. Open Workflow Builder from the workspace menu in the top left - `main menu > Tools > Workflow Builder`.
+     ![Tools -> Workflow Builder](/images/slack-open-workflow-builder.jpeg)
+3. Click `Import` and select your downloaded template file.
+4. It will then walk you through the last couple steps of naming & updating variables.
+5. 🥳 Congrats! All you need to do is `Publish` your workflow, and you should be ready to use it with your team.
 
 ## Templates
 
