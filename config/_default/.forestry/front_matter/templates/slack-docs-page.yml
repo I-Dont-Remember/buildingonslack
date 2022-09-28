@@ -26,3 +26,5 @@ fields:
 - type: boolean
   name: toc
   label: toc
+pages:
+- content/en/docs/slack/cons-of-slack.md
