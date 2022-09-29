@@ -19,8 +19,9 @@ Teaching you how to use Workflow Builder to the fullest, and also how to develop
 
 Fun fact! Workflow Builder was originally a [Slack app called Missions](https://www.robotsandpencils.com/work/high-tech/missions/), which was then acquired by Slack in 2018 and built into what you know today.
 
-* [Steps from apps | Slack Docs](https://api.slack.com/workflows/steps)
-* 
+* [Slack Docs | Workflow Builder: Steps from Apps](https://api.slack.com/workflows/steps)
+* [Slack Help Docs | Workflow Builder](https://slack.com/help/articles/360035692513-Guide-to-Workflow-Builder)
+* [Slack Bolt Python | Workflow Steps](https://slack.dev/bolt-python/concepts#steps)
 
 ## 🏃‍♀️Using Workflow Builder
 
