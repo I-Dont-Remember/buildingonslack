@@ -2,8 +2,8 @@
 title: Workflow Builder Templates
 description: Slack Workflow Builder Templates to empower your team.
 lead: ''
-date: 2022-09-23T17:13:00+00:00
-lastmod: 2022-09-23T17:13:00+00:00
+date: 2022-09-23T17:13:00.000+00:00
+lastmod: 2022-09-23T17:13:00.000+00:00
 images:
 - "/images/shared-inbox-workflow.png"
 weight: "111"
@@ -18,6 +18,8 @@ Templates are only as useful if you are able to easily use them. To get a Workfl
 
 1. Download your desired template file, will either end in `.workflow` or `.json`.
 2. Open Workflow Builder from the workspace menu in the top left - `main menu > Tools > Workflow Builder`.
+
+   
    ![Tools -> Workflow Builder](/images/slack-open-workflow-builder.jpeg)
 3. Click `Import` and select your downloaded template file.
 4. It will then walk you through the last couple steps of naming & updating variables.
@@ -36,7 +38,5 @@ We already have shared inboxes & aliases for our emails, so let's extend that in
 ## Slack-created template lists
 
 * [Slack Workflow Builder examples library](https://slack.com/slack-tips/workflow-builder-examples)
-
-
 * [5 new Workflow Builder templates for remote teams | Slack](https://slack.com/blog/productivity/workflow-builder-templates-remote-teams)
 * [8 Workflow Builder templates for software engineers](https://slack.com/resources/using-slack/workflow-builder-templates-for-software-engineers)
