@@ -74,7 +74,7 @@ copyRight = "Copyright (c) 2022 Kevin Quinn"
 alert = true
 alertDismissable = true
 # alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "[Sponsor] Send Slack direct messages to dozens of people at once with <a class=\"alert-link stretched-link\" href=\"https://happybara.io/apps/nightowl\" target=\"_blank\" rel=\"noopener\">Nightowl from Happybara</a>"
+alertText = "[Sponsor] Send Slack direct messages to dozens of people at once with <a class=\"alert-link stretched-link\" href=\"https://happybara.io/apps/nightowl?ref=buildingonslack\" target=\"_blank\" rel=\"noopener\">Nightowl from Happybara</a>"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster

@@ -9,6 +9,9 @@ weight: "110"
 toc: true
 
 ---
+
+Teaching you how to use Workflow Builder to the fullest, and also how to develop awesome Workflow Steps without having to spend as long understanding the inner workings.
+
 {{< alert icon="🗞️" context="warning" >}}
 
 * Early 2023 should see the launch of `if-then` logic to Workflows, according to multiple press releases from _Sept 2022_ - [Technzine.eu](https://www.techzine.eu/news/devops/87761/slack-expands-workflow-builder-with-if-then-statements/), [Tech Crunch](https://techcrunch.com/2022/09/01/slack-gains-new-automation-features-including-conditional-logic-for-workflows/).
