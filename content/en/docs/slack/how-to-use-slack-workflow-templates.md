@@ -1,7 +1,6 @@
 +++
 date = 2022-09-29T13:51:34Z
-description = ""
-draft = true
+description = "How to import and use Slack Workflow Builder Templates in just a few clicks."
 images = []
 lastmod = 2022-09-29T13:51:34Z
 lead = ""
