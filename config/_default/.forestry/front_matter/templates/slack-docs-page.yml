@@ -14,15 +14,18 @@ fields:
 - type: datetime
   name: date
   label: date
+  default: now
 - type: datetime
   name: lastmod
   label: lastmod
+  default: now
 - type: list
   name: images
   label: images
 - type: number
   name: weight
   label: weight
+  default: 999
 - type: boolean
   name: toc
   label: toc
