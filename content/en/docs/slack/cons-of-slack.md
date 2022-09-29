@@ -11,3 +11,7 @@ weight = 999
 
 +++
 [https://twitter.com/swyx/status/1369355005480873987](https://twitter.com/swyx/status/1369355005480873987 "https://twitter.com/swyx/status/1369355005480873987")
+
+[https://news.ycombinator.com/item?id=30356901](https://news.ycombinator.com/item?id=30356901 "https://news.ycombinator.com/item?id=30356901")
+
+ [Can Slack-mania be cured with systemized discipline?](https://brandur.org/fragments/slack-mania)
