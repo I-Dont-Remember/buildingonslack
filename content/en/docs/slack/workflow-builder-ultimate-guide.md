@@ -2,8 +2,8 @@
 title: Workflow Builder Ultimate Guide
 description: ''
 lead: ''
-date: 2022-09-21T22:21:00.000-05:00
-lastmod: 2022-09-21T22:21:00.000-05:00
+date: 2022-09-22T03:21:00+00:00
+lastmod: 2022-09-30T14:00:00+00:00
 images: []
 weight: "110"
 toc: true
@@ -45,9 +45,9 @@ Slack started off with just 2 built-in steps: `Send a message`, `Send a form`.  
 
 ![](/images/workflows-built-in-actions.png)
 
-### Workflow Builder execution analytics
+### Workflow Builder execution analytics & errors
 
-Slack does provide some limited analytics information to help you track & debug how your workflows are running.
+Slack does provide some limited analytics information to help you track & debug how your workflows are running. 
 
 ![](/images/workflow-analytics.png)
 
@@ -79,8 +79,10 @@ So you want to build a Step.
 
 These are suggestions just from my own experience developing steps and running into issues, they are by no mean law to live by.
 
-* Catch all exceptions/errors during your `step execution` functions to send `fail()`
-  * An execution will keep running until receiving `complete` or `fail`, so if you hit an error in the middle and aren't catching it, your users will end up with a bunch of in-progress executions in their analytics with no error messages.
+* Catch all exceptions/errors during your `step execution` functions to send `fail().`
+  * _An execution will keep running until receiving `complete` or `fail`, so if you hit an error in the middle and aren't catching it, your users will end up with a bunch of in-progress executions in their analytics with no error messages._
+* Give descriptive error messages to users of your Step.
+  * _There_ [_doesn't appear to be a limit_](#workflow-error-message-limitations) _on how many characters you can send back in your `fail()`, so provide your users something more useful than `It Broke`._
 
 ### App setup
 
@@ -154,6 +156,17 @@ Example is with Bolt since it abstracts away a lot of the Step interaction, so i
     )
     app.step(utils_ws)
 
+### Changing the Step display name & image
+
+The `update` method has a couple additional arguments available with `step_name` and `step_image_url`.
+Conveniently, there isn't much restriction on what you can do with this, not even a length limit! I was able to pass a super long string in and it just pushes the `Edit` button away. Escape characters seem to work (at least `\n`), but Markdown is not supported.
+
+Gave it the following string, and see image for what it spit out:
+
+    step_name = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n*Markdown*\nEscape chars: \b\t\r\f\s\'\"\\"
+
+![](/images/workflow-testing-step-name-restrictions.png)
+
 ### How long can an execution run?
 
 An execution has to eventually send a `complete()` or `fail()`, but how long can you process until it just times out? I haven't found any docs with a specific time yet, but have kicked off a few different tests, and it seems to be **_at minimum 20 days_**. If my [hypothesis about their underlying infrastructure](#hypothesis-on-architecture) is correct, you may have up to 1 year until it gives up. This screenshot from 9-27-2022 shows an execution I started on 9-7-2022 with it still showing `In progress` waiting for a signal.
@@ -161,6 +174,19 @@ An execution has to eventually send a `complete()` or `fail()`, but how long can
 ![](/images/long-running-execution.png)
 
 With a window on the order of days rather than seconds, it opens up new possibilities. Human-time-scale tasks suddenly become a possibility in your Workflows - I could mail a letter with the execution ID and have my friend complete it when it gets to him. The sky is the limit!
+
+### Workflow error message limitations
+
+Can Workflow error messages include Markdown? How long can they be?
+
+* Sadly, no. You can only pass `plain_text` errors back to users to show in their Analytics page. Emojis work though! 😅
+
+
+* In my testing, I sent `3800` characters without it breaking, so length is no excuse for not giving descriptive and useful error messages.
+
+### What happens to Workflows if my Step server is down?
+
+From what I can tell, it seems like they get marked as `In progress` in the Workflow Builder analytics page, but provide no further information to tell user (or you) that your server didn't respond vs intentionally was processing data.
 
 ### Hypothesis on architecture
 
