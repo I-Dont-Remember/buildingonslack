@@ -1,15 +1,17 @@
 ---
 title: Workflow Builder Ultimate Guide
-description: ''
+description: Teaching users & developers how to automate their Slack workspaces with
+  Workflow Builder. Taking you beyond the Slack docs and answering the questions I
+  wished were answered when I started.
 lead: ''
 date: 2022-09-22T03:21:00+00:00
-lastmod: 2022-09-30T14:00:00+00:00
+lastmod: 2022-09-30T23:00:00+00:00
 images: []
 weight: "110"
 toc: true
 
 ---
-Teaching you how to use Workflow Builder to the fullest, and also how to develop awesome Workflow Steps without having to spend as long understanding the inner workings.
+Teaching users & developers how to automate their Slack workspaces with Workflow Builder. Taking you beyond the Slack docs and answering the questions I wished were answered when I started.
 
 {{< alert icon="🗞️" context="warning" >}}
 
@@ -47,7 +49,7 @@ Slack started off with just 2 built-in steps: `Send a message`, `Send a form`.  
 
 ### Workflow Builder execution analytics & errors
 
-Slack does provide some limited analytics information to help you track & debug how your workflows are running. 
+Slack does provide some limited analytics information to help you track & debug how your workflows are running.
 
 ![](/images/workflow-analytics.png)
 
@@ -180,13 +182,20 @@ With a window on the order of days rather than seconds, it opens up new possibil
 Can Workflow error messages include Markdown? How long can they be?
 
 * Sadly, no. You can only pass `plain_text` errors back to users to show in their Analytics page. Emojis work though! 😅
-
-
 * In my testing, I sent `3800` characters without it breaking, so length is no excuse for not giving descriptive and useful error messages.
 
 ### What happens to Workflows if my Step server is down?
 
 From what I can tell, it seems like they get marked as `In progress` in the Workflow Builder analytics page, but provide no further information to tell user (or you) that your server didn't respond vs intentionally was processing data.
+
+### Workflows using out-dated versions of your Step
+
+Once a workflow step is built, you will find yourself with users who built Workflows on old `inputs/outputs` schema from any point in your Step's history. If you are actively developing your Step while it's in-use _(especially changing variable names, adding new `inputs`, etc)_ you may end up with events missing **required** inputs in your newer schemas! So far I see two options to handle it:
+
+* 🧘‍♀️Support the old schema to the absolute best of your ability.
+* ❌fail the step and send the user a message telling them to upgrade. This seems like a very bull-headed approach, and not recommended.
+
+In some cases you may have no choice but to poke the user to update, but that's a path to mega frustration, and to be avoided if possible.
 
 ### Hypothesis on architecture
 
