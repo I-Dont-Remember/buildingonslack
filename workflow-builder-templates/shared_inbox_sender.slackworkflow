@@ -1,1 +1,97 @@
-{"source_id":"426850729131521998","version":"1","workflow":{"name":"Shared Inbox Sender","blueprint":{"version":"1","trigger":{"type":"channel_action","id":"b85b9ae7-587f-4ab8-b535-2625319b5ff9","config":{"name":"Ask the Instructors","channels":["CP1ERR221"],"callback_id":"b5892f90-8daa-448f-9766-e460ee5dcaa4","description":"Ask the Instructors"}},"steps":[{"type":"dialog","id":"cb9ff020-e60a-48d3-9ab9-17e49f157e8b","config":{"dialog_title":"Ask the Instructors","dialog_elements":[{"name":"58a9a4f0-0954-4fa4-b998-e36c91f402bb","type":"select","label":"What is the topic?","options":[{"label":"Need help","value":"Need help"},{"label":"General question","value":"General question"},{"label":"Feedback","value":"Feedback"},{"label":"Other","value":"Other"}],"optional":false,"data_source":"static"},{"name":"2f73134b-0cb7-4296-9fe1-4920071ad995","type":"textarea","label":"What can the instructors help with?","optional":false}],"results_channel":{"value":"C043H2K6H62"},"dialog_submit_label":"","delivery_button_label":"Open Form","delivery_message_text":"Hello! To get started, please fill out this form."}},{"type":"message","id":"bf66e165-8996-4ce2-befc-50bbbefb961e","config":{"user":{"ref":"b85b9ae7-587f-4ab8-b535-2625319b5ff9==user"},"has_button":false,"message_text":"Thanks for reaching out to your instructors! You will hear back from one of shortly in a DM.","message_blocks":[{"type":"rich_text","elements":[{"type":"rich_text_section","elements":[{"text":"Thanks for reaching out to your instructors! You will hear back from one of shortly in a DM.","type":"text"}]}]}]}}]}}}
+{
+   "source_id": "426850729131521998",
+   "version": "1",
+   "workflow": {
+      "name": "Shared Inbox Sender",
+      "blueprint": {
+         "version": "1",
+         "trigger": {
+            "type": "channel_action",
+            "id": "b85b9ae7-587f-4ab8-b535-2625319b5ff9",
+            "config": {
+               "name": "Ask the Instructors",
+               "channels": [
+                  "CP1ERR221"
+               ],
+               "callback_id": "b5892f90-8daa-448f-9766-e460ee5dcaa4",
+               "description": "Ask the Instructors"
+            }
+         },
+         "steps": [
+            {
+               "type": "dialog",
+               "id": "cb9ff020-e60a-48d3-9ab9-17e49f157e8b",
+               "config": {
+                  "dialog_title": "Ask the Instructors",
+                  "dialog_elements": [
+                     {
+                        "name": "58a9a4f0-0954-4fa4-b998-e36c91f402bb",
+                        "type": "select",
+                        "label": "What is the topic?",
+                        "options": [
+                           {
+                              "label": "Need help",
+                              "value": "Need help"
+                           },
+                           {
+                              "label": "General question",
+                              "value": "General question"
+                           },
+                           {
+                              "label": "Feedback",
+                              "value": "Feedback"
+                           },
+                           {
+                              "label": "Other",
+                              "value": "Other"
+                           }
+                        ],
+                        "optional": false,
+                        "data_source": "static"
+                     },
+                     {
+                        "name": "2f73134b-0cb7-4296-9fe1-4920071ad995",
+                        "type": "textarea",
+                        "label": "What can the instructors help with?",
+                        "optional": false
+                     }
+                  ],
+                  "results_channel": {
+                     "value": "C043H2K6H62"
+                  },
+                  "dialog_submit_label": "",
+                  "delivery_button_label": "Open Form",
+                  "delivery_message_text": "Hello! To get started, please fill out this form."
+               }
+            },
+            {
+               "type": "message",
+               "id": "bf66e165-8996-4ce2-befc-50bbbefb961e",
+               "config": {
+                  "user": {
+                     "ref": "b85b9ae7-587f-4ab8-b535-2625319b5ff9==user"
+                  },
+                  "has_button": false,
+                  "message_text": "Thanks for reaching out to your instructors! You will hear back from one of shortly in a DM.",
+                  "message_blocks": [
+                     {
+                        "type": "rich_text",
+                        "elements": [
+                           {
+                              "type": "rich_text_section",
+                              "elements": [
+                                 {
+                                    "text": "Thanks for reaching out to your instructors! You will hear back from one of shortly in a DM.",
+                                    "type": "text"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}

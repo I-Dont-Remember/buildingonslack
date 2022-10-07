@@ -1,0 +1,213 @@
+{
+   "source_id": "428881947259843165",
+   "version": "1",
+   "workflow": {
+      "name": "Submit your AMA Questions",
+      "blueprint": {
+         "version": "1",
+         "trigger": {
+            "type": "channel_action",
+            "id": "1764e66c-8d2c-4431-a2a9-2be76b8be253",
+            "config": {
+               "name": "Submit your AMA Question",
+               "channels": [
+                  "C045QDV3TPE"
+               ],
+               "callback_id": "aaeee840-d1f3-43ca-a97d-4c6bd5ddcdb1",
+               "description": "Submit your AMA Question"
+            }
+         },
+         "steps": [
+            {
+               "type": "dialog",
+               "id": "e6e241ec-6aab-4535-a850-5cb99077060d",
+               "config": {
+                  "dialog_title": "AMA Question Submission",
+                  "results_user": {
+                     "ref": "1764e66c-8d2c-4431-a2a9-2be76b8be253==user"
+                  },
+                  "dialog_elements": [
+                     {
+                        "name": "4cf7db97-022a-48b5-be1b-fdff54cae6a7",
+                        "type": "textarea",
+                        "label": "What's your AMA question?",
+                        "optional": false
+                     }
+                  ],
+                  "dialog_submit_label": "",
+                  "delivery_button_label": "Open Form",
+                  "delivery_message_text": "Hello! To get started, please fill out this form."
+               }
+            },
+            {
+               "type": "message",
+               "id": "380df431-8e73-4c0e-b1c1-16ee29a5217d",
+               "config": {
+                  "user": {
+                     "ref": "1764e66c-8d2c-4431-a2a9-2be76b8be253==user"
+                  },
+                  "has_button": false,
+                  "message_text": "Thank you for submitting your question! The team will review it, and if it is selected, you will be tagged when it is answered in <#C045QDV3TPE>!",
+                  "message_blocks": [
+                     {
+                        "type": "rich_text",
+                        "elements": [
+                           {
+                              "type": "rich_text_section",
+                              "elements": [
+                                 {
+                                    "text": "Thank you for submitting your question! The team will review it, and if it is selected, you will be tagged when it is answered in ",
+                                    "type": "text"
+                                 },
+                                 {
+                                    "type": "channel",
+                                    "channel_id": "C045QDV3TPE"
+                                 },
+                                 {
+                                    "text": "!",
+                                    "type": "text"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            },
+            {
+               "type": "message",
+               "id": "2b280991-3f5e-4eec-91ea-5fec97950589",
+               "config": {
+                  "channel": {
+                     "value": "C045K27NF2R"
+                  },
+                  "has_button": true,
+                  "button_label": "Send Question to AMA Channel",
+                  "message_text": ":mailbox:  New question from {{1764e66c-8d2c-4431-a2a9-2be76b8be253==user}} for the team.\n\n{{e6e241ec-6aab-4535-a850-5cb99077060d==4cf7db97-022a-48b5-be1b-fdff54cae6a7==text}}",
+                  "message_blocks": [
+                     {
+                        "type": "rich_text",
+                        "elements": [
+                           {
+                              "type": "rich_text_section",
+                              "elements": [
+                                 {
+                                    "name": "mailbox",
+                                    "type": "emoji",
+                                    "unicode": "1f4eb"
+                                 },
+                                 {
+                                    "text": "  ",
+                                    "type": "text"
+                                 },
+                                 {
+                                    "text": "New question",
+                                    "type": "text",
+                                    "style": {
+                                       "code": true
+                                    }
+                                 },
+                                 {
+                                    "text": " from ",
+                                    "type": "text"
+                                 },
+                                 {
+                                    "id": "1764e66c-8d2c-4431-a2a9-2be76b8be253==user",
+                                    "type": "workflowtoken",
+                                    "property": "",
+                                    "data_type": "user"
+                                 },
+                                 {
+                                    "text": " for the team.\n\n",
+                                    "type": "text"
+                                 }
+                              ]
+                           },
+                           {
+                              "type": "rich_text_quote",
+                              "elements": [
+                                 {
+                                    "id": "e6e241ec-6aab-4535-a850-5cb99077060d==4cf7db97-022a-48b5-be1b-fdff54cae6a7==text",
+                                    "type": "workflowtoken",
+                                    "property": "",
+                                    "data_type": "text"
+                                 }
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            },
+            {
+               "type": "message",
+               "id": "fae9cb63-4820-4734-aa46-f1e993338d07",
+               "config": {
+                  "channel": {
+                     "value": "C045QDV3TPE"
+                  },
+                  "has_button": false,
+                  "message_text": ":mailbox:  New question from {{1764e66c-8d2c-4431-a2a9-2be76b8be253==user}} for the team.\n\n{{e6e241ec-6aab-4535-a850-5cb99077060d==4cf7db97-022a-48b5-be1b-fdff54cae6a7==text}}",
+                  "message_blocks": [
+                     {
+                        "type": "rich_text",
+                        "elements": [
+                           {
+                              "type": "rich_text_section",
+                              "elements": [
+                                 {
+                                    "name": "mailbox",
+                                    "type": "emoji",
+                                    "unicode": "1f4eb"
+                                 },
+                                 {
+                                    "text": "  ",
+                                    "type": "text"
+                                 },
+                                 {
+                                    "text": "New question",
+                                    "type": "text",
+                                    "style": {
+                                       "code": true
+                                    }
+                                 },
+                                 {
+                                    "text": " from ",
+                                    "type": "text"
+                                 },
+                                 {
+                                    "id": "1764e66c-8d2c-4431-a2a9-2be76b8be253==user",
+                                    "type": "workflowtoken",
+                                    "property": "",
+                                    "data_type": "user"
+                                 },
+                                 {
+                                    "text": " for the team.\n\n",
+                                    "type": "text"
+                                 }
+                              ]
+                           },
+                           {
+                              "type": "rich_text_quote",
+                              "elements": [
+                                 {
+                                    "id": "e6e241ec-6aab-4535-a850-5cb99077060d==4cf7db97-022a-48b5-be1b-fdff54cae6a7==text",
+                                    "type": "workflowtoken",
+                                    "property": "",
+                                    "data_type": "text"
+                                 }
+                              ]
+                           },
+                           {
+                              "type": "rich_text_section",
+                              "elements": []
+                           }
+                        ]
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}

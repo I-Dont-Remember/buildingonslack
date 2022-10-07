@@ -36,6 +36,8 @@ Ready to run your own AMA without any coding required?
    * Responses are dropped into a private channel (`#happybara-ama-submissions`.) for Slack team members to review & approve.
    * if they are approved, a button on the message is clicked, and they then get posted by the Workflow bot to the `#slack-ama` channel.
 
+{{< btn class="btn-primary btn-lg px-4 mb-2" label="View Template on GitHub" href="https://github.com/I-Dont-Remember/buildingonslack/blob/main/workflow-builder-templates/submit_your_ama_questions.slackworkflow" newTab=true >}}
+
 ![](/images/slack-workflow-ama-template.png)
 
 ## Potential improvements

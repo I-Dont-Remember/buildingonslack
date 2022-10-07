@@ -35,6 +35,14 @@ We already have shared inboxes & aliases for our emails, so let's extend that in
 
 {{< btn class="btn-primary btn-lg px-4 mb-2" label="View Template on GitHub" href="https://github.com/I-Dont-Remember/buildingonslack/blob/main/workflow-builder-templates/shared_inbox_sender.slackworkflow" newTab=true >}}
 
+### Run an AMA in Slack
+
+A template and a few additional steps to take in your Workspace to run a succesful AMA just like the Slack team does in the Community workspace.
+
+Read more at [How to run a Slack AMA with Workflow Builder](/docs/slack/how-to-run-a-slack-ama-with-workflow-builder/).
+
+{{< btn class="btn-primary btn-lg px-4 mb-2" label="View Template on GitHub" href="https://github.com/I-Dont-Remember/buildingonslack/blob/main/workflow-builder-templates/submit_your_ama_questions.slackworkflow" newTab=true >}}
+
 ## Slack-created template lists
 
 * [Slack Workflow Builder examples library](https://slack.com/slack-tips/workflow-builder-examples)
