@@ -30,7 +30,8 @@
     ignorePeriod = 0
     providers = [
       "google",
-      "yandex"
+      "yandex",
+      "bing"
     ]
 
 [dev]

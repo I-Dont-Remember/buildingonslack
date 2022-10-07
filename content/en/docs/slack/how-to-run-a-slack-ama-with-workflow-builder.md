@@ -1,13 +1,13 @@
 +++
 date = 2022-10-07T21:46:25Z
 description = "Run an AMA in Slack just like their Community team does using Workflow Builder automation."
-draft = true
+draft = false
 images = []
 lastmod = 2022-10-07T21:46:25Z
 lead = ""
 title = "How to run a Slack AMA with Workflow Builder"
 toc = false
-weight = 999
+weight = 120
 
 +++
 The Slack Community team does a great job running AMA in Slack so developers & community members can get a taste of what’s ahead directly from Slack leaders. They are using Workflow Builder to moderate the AMA questions coming in, and I wanted to see if I could replicate it.
