@@ -3,14 +3,14 @@
 ## Homepage
 title = "Building on Slack"
 titleSeparator = "-"
-titleAddition = "Slack Attack"
-description = "A description about Slack stuff"
+titleAddition = ""
+description = "Helping teams use Slack to the fullest."
 
 ## Documentation
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["simple-bos-square.png"]
 ogLocale = "en_US"
 domainTLD = "buildingonslack.com"
 titleHome = "Building on Slack"
@@ -28,10 +28,10 @@ schemaAuthorTwitter = "https://twitter.com/maybekq"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/quinnkevinp/"
 schemaAuthorGitHub = "https://github.com/i-dont-remember/"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "simple-bos-square.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "simple-bos-square.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/maybekq"
@@ -61,7 +61,7 @@ singleSize = false
 imageAddClass = "img-fluid lazyload blur-up"
 
 ### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
+defaultImage = "simple-bos-rectangle-logo.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
@@ -80,7 +80,7 @@ alertText = "[Sponsor] Send Slack direct messages to dozens of people at once wi
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
 repoHost = "GitHub"
 #repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/I-Dont-Remember/buildingonslack"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
 editPage = false

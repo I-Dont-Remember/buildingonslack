@@ -26,4 +26,3 @@ Notes, articles, and inspiration for building on Slack.
 - [Slack API Docs](https://api.slack.com/)
 - [Your Slack Apps Dashboard](https://api.slack.com/apps)
 - [Block Kit Builder](https://app.slack.com/block-kit-builder/)
-

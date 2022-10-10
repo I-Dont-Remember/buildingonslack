@@ -13,5 +13,5 @@ menu:
 weight: 200
 toc: true
 ---
-Don't be a [frustrating Slack user](https://kevinquinn.fun/blog/the-frustrating-users-guide-to-slack/).
 
+Don't be a [frustrating Slack user](https://kevinquinn.fun/blog/the-frustrating-users-guide-to-slack/).

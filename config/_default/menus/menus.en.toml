@@ -33,6 +33,11 @@
   url = "/docs/slack/introduction/"
   weight = 10
 
+[[main]]
+  name = "Workflows"
+  url = "/workflows/"
+  weight = 11
+
 # [[main]]
 #   name = "Tutorial"
 #   url = "/tutorial/lorem/ipsum/"
