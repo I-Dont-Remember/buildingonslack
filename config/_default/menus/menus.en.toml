@@ -38,6 +38,11 @@
   url = "/workflows/"
   weight = 11
 
+[[main]]
+  name = "Consulting"
+  url = "/consulting/"
+  weight = 12
+
 # [[main]]
 #   name = "Tutorial"
 #   url = "/tutorial/lorem/ipsum/"
