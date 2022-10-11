@@ -16,7 +16,7 @@ You could get help from an "expert" consultant from the big firms, or you could 
 
 ![21b logo](/images/21b-logo-10-inch.webp)
 
-- [website](https://www.21b.app/)
+- [website](https://www.21b.app/?ref=buildingonslack)
 
 Matt and Daniel are 100% focused on helping you use Slack to the fullest. Whether it's relaunching a messy current setup, a fresh roll out with best practices, Slack admininstration, custom apps, anywhere you need help - they've got you covered.
 
