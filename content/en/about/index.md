@@ -18,11 +18,10 @@ images: []
 - Becoming a power user of all of Slack's awesome features.
 - Understanding how SaaS founders in the past were able to build businesses on top of Slack.
 
-
 ## Who are you?
 
 I'm a software engineer who has used Slack at organizations ranging in size from 2 people to thousands. I've been a part of building Slack apps at each of those organizations, and I just really enjoy learning & teaching about Slack. I'm also [Slack Certified](/docs/slack/slack-certified/) if that matters to you.
 
-
 ## Questions/Comments/Hate mail?
-If you need to reach me, best place is is through [Twitter DMs](https://twitter.com/maybekq), or through my email proxy - [buildingonslack@notxss.anonaddy.com](mailto:buildingonslack@notxss.anonaddy.com)
+
+If you need to reach me, best place is is through [Twitter DMs](https://twitter.com/maybekq), [Reddit chat](https://www.reddit.com/user/WilyOcelot), or through my email proxy - [buildingonslack@notxss.anonaddy.com](mailto:buildingonslack@notxss.anonaddy.com)

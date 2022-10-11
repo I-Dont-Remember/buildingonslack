@@ -53,6 +53,11 @@
   url = "https://www.reddit.com/r/Slack/"
   weight = 20
 
+[[main]]
+  name = "About"
+  url = "/about/"
+  weight = 25
+
 # [[main]]
 #   name = "Get Started"
 #   weight = 30
