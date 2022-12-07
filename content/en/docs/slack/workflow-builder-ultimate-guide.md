@@ -5,7 +5,7 @@ description: Teaching users & developers how to automate their Slack workspaces 
   wished were answered when I started.
 lead: ''
 date: 2022-09-22T03:21:00.000+00:00
-lastmod: 2022-09-30T23:00:00.000+00:00
+lastmod: 2022-12-07T15:12:17+00:00
 images: []
 weight: "110"
 toc: true
