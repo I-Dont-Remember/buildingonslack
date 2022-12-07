@@ -4,10 +4,10 @@ description: Teaching users & developers how to automate their Slack workspaces 
   Workflow Builder. Taking you beyond the Slack docs and answering the questions I
   wished were answered when I started.
 lead: ''
-date: 2022-09-22T03:21:00+00:00
-lastmod: 2022-09-30T23:00:00+00:00
+date: 2022-09-22T03:21:00.000+00:00
+lastmod: 2022-09-30T23:00:00.000+00:00
 images: []
-weight: 110
+weight: "110"
 toc: true
 
 ---
@@ -19,7 +19,11 @@ Teaching users & developers how to automate their Slack workspaces with Workflow
 * _"Also early next year, Slack will expand its library of Workflow Builder steps with tasks like automatically creating channels and alerting users once they start a workflow and providing integrations for additional third-party apps and tools."_
   {{< /alert >}}
 
-Fun fact! Workflow Builder was originally a [Slack app called Missions](https://www.robotsandpencils.com/work/high-tech/missions/), which was then acquired by Slack in 2018 and built into what you know today.
+## What is a Slack Workflow?
+
+Slack Workflows are a tool to let you automate your Slack workspace and more. You create them using the `Slack Workflow Builder` tool, which will be getting a ton of updates and new features in 2023.
+
+Fun fact! Slack Workflow Builder was originally a [Slack app called Missions](https://www.robotsandpencils.com/work/high-tech/missions/), which was then acquired by Slack in 2018 and built into what you know today.
 
 * [Slack Docs | Workflow Builder: Steps from Apps](https://api.slack.com/workflows/steps)
 * [Slack Help Docs | Workflow Builder](https://slack.com/help/articles/360035692513-Guide-to-Workflow-Builder)
@@ -27,7 +31,7 @@ Fun fact! Workflow Builder was originally a [Slack app called Missions](https://
 
 ## 🏃‍♀️Using Workflow Builder
 
-The nitty-gritty of getting Slack Workflow Builder to do your bidding.
+The nitty-gritty of getting Slack Workflow Builder to do your bidding and use workflows in Slack.
 
 ### Available Triggers
 
@@ -41,11 +45,18 @@ There are 5 triggers available right now:
 
 ![](/images/workflows-built-in-triggers.png)
 
+Wishing you could use any Slack event as a trigger, rather than just these 5? Slack is likely to add many of them in the next year or two, but if you need a solution for the interim, there is a [free, open-source app (Workflow Buddy)](https://github.com/happybara-io/WorkflowBuddy#-available-triggers) that lets you proxy any Slack event as a trigger.
+
+
 ### Built-in Steps
 
 Slack started off with just 2 built-in steps: `Send a message`, `Send a form`.  They also provide the ability to use Steps from other apps, but you have to already have them installed to use them (or to even search them).
 
 ![](/images/workflows-built-in-actions.png)
+
+{{< alert icon="💡" context="info" >}}
+`Steps from Apps` lets developers get real creative with new functionality. If you're looking to be able to [send HTTP requests/webhooks](/docs/slack/slack-workflow-builder-http-request-tool/) with Slack Workflows, choose random channel members, and much more, take a look at the [free, open-source app](https://github.com/happybara-io/WorkflowBuddy) that adds a ton of useful utilities for no-code builders.
+{{< /alert >}}
 
 ### Workflow Builder execution analytics & errors
 
@@ -71,13 +82,13 @@ Best of luck, and if you find something new, please reach out so we can add it a
 
 Looking to build your own `Steps from apps`? Check out the [Workflow Builder Developer Guide](/docs/slack/workflow-builder-developer-guide/)).
 
----
+***
 
 ## Examples & templates
 
 See [Workflow Builder Templates](/docs/slack/workflow-builder-templates/).
 
----
+***
 
 ## Resources & articles
 
