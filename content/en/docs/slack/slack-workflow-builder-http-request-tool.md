@@ -5,7 +5,8 @@ description: Unlocking the ability to send HTTP requests from Slack Workflow Bui
 lead: ''
 date: 2022-12-07T08:15:44.000-06:00
 lastmod: 2022-12-07T08:15:44.000-06:00
-images: []
+images:
+- "/images/bos-workflow-buddy-http-request.png"
 weight: "999"
 toc: true
 draft: true
@@ -37,7 +38,8 @@ Since Slack doesn't have HTTP/JSON functionality built in to their Workflow Buil
 
 ## Slack Workflow Send HTTP Request
 
-If you haven't left the page already, you likely are interested in playing around with the tool that lets you send outgoing webhooks in Slack workflows. 
+If you haven't left the page already, you likely are interested in playing around with the tool that lets you send outgoing webhooks in Slack workflows.
 
-There is a [Workflow Buddy Demo app](https://github.com/happybara-io/WorkflowBuddy#demo-app) that you can install and play around with in your workspace, then if it handles your use case you can explore their other options for [Running Workflow Buddy](https://github.com/happybara-io/WorkflowBuddy#running-workflow-buddy).
+There is a [Workflow Buddy Demo app](https://github.com/happybara-io/WorkflowBuddy#demo-app) that you can install and play around with in your workspace. If it handles your use case, you can the explore the other options for [Running Workflow Buddy](https://github.com/happybara-io/WorkflowBuddy#running-workflow-buddy) - the Cloud version is currently on a waitlist, but it is self-hostable for free.
 
+Best of luck, and if you run into any issues, check the [docs & support resources](https://github.com/happybara-io/WorkflowBuddy#support)!
