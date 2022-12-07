@@ -9,7 +9,6 @@ images:
 - "/images/bos-workflow-buddy-http-request.png"
 weight: "999"
 toc: true
-draft: true
 
 ---
 When automating your workload with no code tools like Slack Workflow Builder, flexibility is incredibly important to handle the last mile of your unique situation that existing tools haven't (or might not) handle for you. Being able to send HTTP Requests/webhooks to other services is often they key unlocking that door, but unfortunately Slack has not added a built-in Step for it. Lucky for you, there is a free open-source Slack App that can help - [Workflow Buddy](https://github.com/happybara-io/WorkflowBuddy)!
