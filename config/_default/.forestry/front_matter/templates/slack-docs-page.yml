@@ -30,6 +30,5 @@ fields:
   name: toc
   label: toc
 pages:
-- content/en/docs/slack/cons-of-slack.md
 - content/en/docs/slack/how-to-run-a-slack-ama-with-workflow-builder.md
 - content/en/docs/slack/how-to-use-slack-workflow-templates.md
