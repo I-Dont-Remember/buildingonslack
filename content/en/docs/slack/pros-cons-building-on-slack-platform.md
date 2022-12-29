@@ -9,31 +9,26 @@ weight: "999"
 toc: false
 
 ---
-> ⚠️ _this is a peek into my brain during the writing process. Trying to better embody the idea of "Show your Work". This page is meant to grow as I let the idea ruminate in my head._
-
 When you're considering building an app nowadays, you're flooded with choices. You can build a stand-alone application, or build on top of a thousand different platforms that already have a growing market share. After building on Slack for several years, there's a few lessons that have stuck out when building on a platform like Slack.
-
-* Pro & Con: Slack: restrict you to use their blocks design system, just a bunch of JSON - as a backend engineer who hates moving buttons around on the frontend, absolutely essential. but their's also plenty of times where you want an input type that doesn't exist, or to add a confirmation to a modal submission, or etc and you just can't.
-  * i think it's overall a benefit because it's flexible enough you're almost never blocked from doing something, sometimes you just have to get a little creative. but you save so much time because you never have to worry about fiddling with how things look - it's always exactly like the blocks you expect. You get to focus on the UX of your app, not where a button is.
-* Your growth is (somewhat) limited by the platform's growth
-  * This is really only a consideration if you are trying to become mega-huge, or 
 
 ## Pros
 
-* Have to worry less about authentication and user management since they handle for you, can concentrate on solving the problem you're focused on rather than all the extraneous bits
-* Many time there are design constraints which make it easier to build, then you can concentrate on making the best UX with what you're given rather than getting distracted by the million potential decisions in the design from colors to size of buttons.
-* Often have a built in app market place for people to find you, get at least some exposure without having to do anything
-* data security is less of a concern, because they are handling auth and etc. Most of what you store is only relevant to your application, their isn't the extra layer of people's passwords, etc.
-* often have a marketplace that can give you exposure like an app store, some people that works really well for like Tettra?
-* we get to take advantage of the improving underlying platform
+* Common needs are already handled for you, like authentication & user management. Spend time working on your problem-space rather than the generic pieces every application has to worry about.
+* In a similar vein, you have a lower surface area to worry about with data security since common sensitive items like authentication is already handled.
+* Design constraints let you concentrate on UX, rather than worrying about a million tiny design choices.
+  * Slack restricts you to use their blocks design system, which is written as a bunch of JSON - as a backend engineer who hates moving buttons around web pages, absolute godsend. That said, there are still moments of frustration where I want an input type that doesn't exist, or to add a confirmation to a modal submission, or etc and you just can't. Overall, it's a pro though, because it's rare that you're completely blocked, usually a little creativity will get you a usable UX, and you avoid the rabbit hole of CSS issues and design decisions. 
+* The built-in app marketplace is free marketing.
+* Whenever the Slack platform improves (like adding Huddles, Shared Channels, etc.) it opens up new opportunities.
 
 ## Cons
 
 * Sometimes the platforms architecture will limit how you can interact with in a way that forces you to not go with the most common option
-* can't get as creative with your designs
-* occasionally the platform will gobble you up, like apple does with cannibalizing popular apps. Slack got us when they released scheduled messages, but we knew it was coming for a long time
-* users think any issues with the platform are tied to your app since that's what they were using at the time of failure
-* Since it's built on as extension of platform, people aren't as willing to pay if you compete against stand alone apps, even if you handle the same capabilities. There's a bias because you're an extension not it's own thing
+* Occasionally platforms like Slack can cannibalize app features.
+  * Slack ate up a bunch of scheduled message apps when they released it natively. Unlike Apple, though, it was clear for a long time that they were going to add it - build at your own risk. 
+* Users think any issues with the platform are tied to your app, since that's what they were using at the time of failure.
+* People aren't as willing to pay, even if you give them powerful capabilities. There's a bias because you're an extension, and not a stand-alone entity.
+* Your growth is (somewhat) limited by the platform's growth.
+  * This is really only a problem if you're trying to be mega-huge. Indie Hackers and small scale friends, ignore this because it's the least of your issues.
 
 ## Other platforms to consider
 
