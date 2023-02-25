@@ -1,0 +1,12 @@
+
+{{ if not (in .Site.BaseURL "localhost") }}
+<iframe class="airtable-embed" src="https://airtable.com/embed/{{ (index .Params 0) }}?backgroundColor=purple&viewControls=on"
+    frameborder="0" onmousewheel="" width="100%" height="533"
+    style="background: transparent; border: 1px solid #ccc;"></iframe>
+{{ else }}
+    <div>
+        <p>⬛⬛⬛⬛⬛</p>
+        <p><strong>Airtable Embed placeholder for Localhost development</strong></p>
+        <p>⬛⬛⬛⬛⬛</p>
+    </div>
+{{ end }}

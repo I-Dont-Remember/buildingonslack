@@ -29,7 +29,7 @@
   url = "/tutorial/lorem/"
 
 [[main]]
-  name = "Docs"
+  name = "Learn"
   url = "/docs/slack/introduction/"
   weight = 10
 
@@ -39,9 +39,14 @@
   weight = 11
 
 [[main]]
+  name = "SADI"
+  url = "/SADI/"
+  weight = 12
+
+[[main]]
   name = "Consulting"
   url = "/consulting/"
-  weight = 12
+  weight = 13
 
 # [[main]]
 #   name = "Tutorial"
