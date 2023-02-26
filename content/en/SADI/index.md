@@ -18,7 +18,7 @@ The web is filled with design inspo for web apps - but what about **Slack Apps**
 
 ## Community Contribution
 
-We welcome your contributions! Share the best Slack App design inspiration you've run into, either from your own apps or ones out in the wild.
+We welcome your contributions! Share the best Slack App design inspiration you've run into, either from your own apps or ones out in the wild. Try using **[Slack's Block Kit Builder](https://app.slack.com/block-kit-builder/)** to design interfaces without code.
 
 **Questions?**
 
