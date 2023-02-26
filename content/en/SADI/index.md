@@ -13,6 +13,8 @@ The web is filled with design inspo for web apps - but what about **Slack Apps**
 
 ## Swipefile of Slack App Inspo
 
+_[Direct Link to the Airtable Gallery](https://airtable.com/shrojJWqTVs7P8gol/tbl5eNtl77EsvXOwz?backgroundColor=purple&viewControls=on)_
+
 {{< airtable-embed shrojJWqTVs7P8gol >}}
 
 ## Community Contribution
