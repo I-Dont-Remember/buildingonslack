@@ -15,7 +15,6 @@ The web is filled with design inspo for web apps - but what about **Slack Apps**
 
 {{< airtable-embed shrojJWqTVs7P8gol >}}
 
-
 ## Community Contribution
 
 We welcome your contributions! Share the best Slack App design inspiration you've run into, either from your own apps or ones out in the wild. Try using **[Slack's Block Kit Builder](https://app.slack.com/block-kit-builder/)** to design interfaces without code.
@@ -27,6 +26,12 @@ _Reach out to [buildingonslack@notxss.anonaddy.com](mailto:buildingonslack@notxs
 **Angry comments?**
 
 _Send to /dev/null._
+
+## Public vs Internal Apps
+
+Even internal Slack Apps deserve to have good UX. PLus, there are MANY times more internal apps than public.
+
+> _"Today, people are collectively using more than 795,000 apps on Slack built by the 885,000 active developers on our platform." vs "The Slack App Directory launched with 150 apps. Today, you’ll find 2,450 apps ready for install." (Dec 10, 2020) - [Celebrating five years of Slack platform](https://medium.com/slack-developer-blog/celebrating-five-years-of-slack-platform-9aa85b1849a3)._
 
 ## Resources
 

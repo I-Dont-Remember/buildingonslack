@@ -14,6 +14,8 @@ Nothing is perfect, and there is a dark side of using Slack at work if your orga
 
 ## Issues to address
 
+Many of these issues apply to chat apps in general, so don't think you can avoid them by jumping ship to Teams.
+
 - **Coworkers who lack Slack etiquette**
 - **Channel fatigue**
 - **Disruptions to concentration**
