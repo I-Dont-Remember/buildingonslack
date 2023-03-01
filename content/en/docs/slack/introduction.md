@@ -18,11 +18,21 @@ Notes, articles, and inspiration for building on Slack.
 
 ## Quick links
 
-- [Slack App Directory](https://slack.com/apps)
-- [Slack Certified](https://www.slackcertified.com/)
+### Building on Slack
 
-## Developer quick links
+- 🎨[Slack App Design Inspo](/sadi/)
+- 🏃‍♂️[All about Workflows](/workflows/)
+- 🧊[Rest of the Iceberg: Internal Slack Apps](/internal-apps/)
+- 👯[Consulting](/consulting/)
+- 📜[All articles list (You are here, see side menu! :D)](/docs/slack/introduction/)
 
-- [Slack API Docs](https://api.slack.com/)
-- [Your Slack Apps Dashboard](https://api.slack.com/apps)
-- [Block Kit Builder](https://app.slack.com/block-kit-builder/)
+### Slack
+
+- 📃[Slack App Directory](https://slack.com/apps)
+- 🏅[Slack Certified](https://www.slackcertified.com/)
+
+### Developers
+
+- 📖[Slack API Docs](https://api.slack.com/)
+- 📊[Your Slack Apps Dashboard](https://api.slack.com/apps)
+- 🏗️[Block Kit Builder](https://app.slack.com/block-kit-builder/)

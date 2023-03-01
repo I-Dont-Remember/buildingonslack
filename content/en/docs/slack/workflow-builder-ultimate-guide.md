@@ -1,5 +1,5 @@
 ---
-title: Workflow Builder Ultimate Guide 2022
+title: Workflow Builder Ultimate Guide 2023
 description: Teaching users & developers how to automate their Slack workspaces with
   Workflow Builder. Taking you beyond the Slack docs and answering the questions I
   wished were answered when I started.
@@ -15,7 +15,7 @@ Teaching users & developers how to automate their Slack workspaces with Workflow
 
 {{< alert icon="🗞️" context="warning" >}}
 
-* Early 2023 should see the launch of `if-then` logic to Workflows, according to multiple press releases from _Sept 2022_ - [Technzine.eu](https://www.techzine.eu/news/devops/87761/slack-expands-workflow-builder-with-if-then-statements/), [Tech Crunch](https://techcrunch.com/2022/09/01/slack-gains-new-automation-features-including-conditional-logic-for-workflows/).
+* In early 2023 we should see the launch of `if-then` logic to Workflows, according to multiple press releases from _Sept 2022_ - [Technzine.eu](https://www.techzine.eu/news/devops/87761/slack-expands-workflow-builder-with-if-then-statements/), [Tech Crunch](https://techcrunch.com/2022/09/01/slack-gains-new-automation-features-including-conditional-logic-for-workflows/).
 * _"Also early next year, Slack will expand its library of Workflow Builder steps with tasks like automatically creating channels and alerting users once they start a workflow and providing integrations for additional third-party apps and tools."_
   {{< /alert >}}
 
