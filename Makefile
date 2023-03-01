@@ -2,6 +2,9 @@
 # doks docs https://getdoks.org/docs/how-to/pages-and-menus/pages/
 
 serve:
+	npm run start-dev
+
+serve-no-drafts:
 	npm run start
 
 # create a new file
