@@ -1,12 +1,12 @@
 +++
-date = 2023-03-11T00:39:56Z
+date = 2023-03-08T00:39:56Z
 description = ""
-draft = true
+draft = false
 images = []
-lastmod = 2023-03-11T00:39:56Z
+lastmod = 2023-03-08T00:39:56Z
 lead = ""
 title = "Building a Slack App on Cloudflare Workers"
-toc = false
+toc = true
 weight = 999
 
 +++
@@ -14,9 +14,15 @@ As Cloudflare continues building out utilities on the Workers platform, it's bec
 
 > ℹ️ _If you want to skip the article and just dig through the starter/example repo --> [GitHub](https://github.com/I-Dont-Remember/cloudflare-workers-slack-app)._
 
-## What's in the box?
+![](/images/bos-cloudflare-workers-example-app-home.png)
 
-Before investing time into setting up your app on top of the [example repo](https://github.com/I-Dont-Remember/cloudflare-workers-slack-app), you probably want to know what's inside so you can decide if it's worth the effort. The repo aims to handle to boring parts so you can get right to building an app, but without adding extra packages you might not want. It has:
+## 🎁 What's in the box?
+
+Before investing time to read this article, you probably want to know if it's worth the energy. You'll be setting up this [example repo](https://github.com/I-Dont-Remember/cloudflare-workers-slack-app), and end up with a barebones Slack App in your own repo ready to continue on with your project.
+
+### Nitty gritty details
+
+ The repo aims to handle to boring parts so you can get right to building an app, but without adding extra packages you might not want. It has:
 
 * A minimal [Slack SDK](https://github.com/sagi/workers-slack), since there isn't an official version for the Cloudflare Workers runtime (as of Spring 2023).
 * Request verification from the same SDK, to ensure requests from Slack ACTUALLY came from Slack.
@@ -24,9 +30,7 @@ Before investing time into setting up your app on top of the [example repo](http
 * Simple data structure for adding new handlers (for button presses, events, etc).
 * A few examples of basic Slack interactions that are easy to update/remove.
 
-That's it!
-
-## Why Build on....
+## 🤔 Why Build on....
 
 The newer Slack Platform and Cloudflare Workers are by no means the only place to host your Slack App server, but they offer a somewhat similar experience and were begging to be compared.
 
@@ -54,7 +58,7 @@ On the surface there's a lot going for the Cloudflare ecosystem - I will add the
 
 ***
 
-## Setup
+## 🏗️ Setup
 
 Now that you've considered your hosting options, let's set up the sample Cloudflare Workers app so you can get hands-on experience using it.
 
