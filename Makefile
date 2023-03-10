@@ -7,6 +7,9 @@ serve:
 serve-no-drafts:
 	npm run start
 
+build:
+	npm run build
+
 # create a new file
 # npm run create about/index.md
 # npm run create docs/overview/introduction.md

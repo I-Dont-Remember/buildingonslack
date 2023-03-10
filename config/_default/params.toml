@@ -10,7 +10,7 @@ description = "Helping teams use Slack to the fullest."
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["simple-bos-square.png"]
+images = ["simple-bos-rectangle-logo.png"]
 ogLocale = "en_US"
 domainTLD = "buildingonslack.com"
 titleHome = "Building on Slack"
@@ -28,10 +28,10 @@ schemaAuthorTwitter = "https://twitter.com/maybekq"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/quinnkevinp/"
 schemaAuthorGitHub = "https://github.com/i-dont-remember/"
 schemaLocale = "en-US"
-schemaLogo = "simple-bos-square.png"
+schemaLogo = "simple-bos-square-logo.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "simple-bos-square.png"
+schemaImage = "simple-bos-square-logo.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/maybekq"
