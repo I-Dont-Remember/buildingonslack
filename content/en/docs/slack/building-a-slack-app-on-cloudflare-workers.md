@@ -12,6 +12,8 @@ weight = 999
 +++
 As Cloudflare continues building out utilities on the Workers platform, it's become a more attractive option for building Slack Apps. By the end of this article, you will have the bones of a Slack App running on Cloudflare Workers. From there, you can build on top of it to create the Slack bot of your dreams.
 
+> ℹ️ _If you want to skip the article and just dig through the starter/example repo --> [GitHub](https://github.com/I-Dont-Remember/cloudflare-workers-slack-app)._
+
 ## What's in the box?
 
 Before investing time into setting up your app on top of the [example repo](https://github.com/I-Dont-Remember/cloudflare-workers-slack-app), you probably want to know what's inside so you can decide if it's worth the effort. The repo aims to handle to boring parts so you can get right to building an app, but without adding extra packages you might not want. It has:
