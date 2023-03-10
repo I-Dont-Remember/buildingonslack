@@ -1,7 +1,7 @@
 +++
 date = 2023-03-08T00:39:56Z
 description = "A guide to build out the bones of your next Slack App on the Cloudflare Workers platform. Take advantage of the speed and utilities available in the Cloudflare ecosystem."
-images = ["/images/bos-cloudflare-workers-example-app-home.png"]
+images = ["images/bos-cloudflare-workers-example-app-home.png"]
 lastmod = 2023-03-08T00:39:56Z
 lead = ""
 title = "Building a Slack App on Cloudflare Workers"
