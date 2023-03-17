@@ -1,39 +1,72 @@
 ---
-title: "Workflow Builder Developer Guide 2023"
-description: "Developing Steps from Apps for Slack Workflow Builder."
-lead: ""
-date: 2022-10-09T23:16:47-05:00
-lastmod: 2022-10-14T23:16:47-05:00
-draft: false
+title: Workflow Builder Developer Guide 2023
+description: Developing Steps from Apps for Slack Workflow Builder.
+lead: ''
+date: 2022-10-09T23:16:47.000-05:00
+lastmod: 2023-03-17T18:30:43+00:00
 images: []
-menu:
-  docs:
-    parent: ""
-    identifier: "workflow-builder-developer-guide-d0eadfa2145563678743e92eaa82c6c2"
-weight: 110
+weight: "110"
 toc: true
----
 
+---
 The notes & guides I found useful while developing my first real Slack Workflow Step.
 
 Quick links:
 
-- [Bolt Python docs](https://slack.dev/bolt-python/concepts).
-- [Slack Workflow Docs](https://api.slack.com/workflows/steps).
+* [Bolt Python docs](https://slack.dev/bolt-python/concepts).
+* [Slack Workflow Docs](https://api.slack.com/workflows/steps).
 
 > _⚠ Apps are limited to ONLY 10 Steps! Keep in mind when designing app UX._
 >
-> _Not everyone will run into this hard limit, but a workaround for those aiming to have lots of functionality in their apps is to create your own action step select, and then run a `view_update` based on their selection - [How-to update](#how-to-update-a-step-modal)._ [_Zapier is a good example_](https://community.zapier.com/product-updates/use-20-zapier-apps-directly-in-slack-s-workflow-builder-5466)_._
+> _Not everyone will run into this hard limit, but a workaround for those aiming to have lots of functionality in their apps is to create your own action step select, and then run a `view_update` based on their selection -_ [_How-to update_](#how-to-update-a-step-modal)_._ [_Zapier is a good example_](https://community.zapier.com/product-updates/use-20-zapier-apps-directly-in-slack-s-workflow-builder-5466)_._
 
 ## Current best practice suggestions
 
 These are suggestions just from my own experience developing steps and running into issues, they are by no mean law to live by.
 
-- Catch all exceptions/errors during your `step execution` functions to send `fail().`
-  - _An execution will keep running until receiving `complete` or `fail`, so if you hit an error in the middle and aren't catching it, your users will end up with a bunch of in-progress executions in their analytics with no error messages._
-- Give descriptive error messages to users of your Step.
-  - _There_ [_doesn't appear to be a limit_](#workflow-error-message-limitations) _on how many characters you can send back in your `fail()`, so provide your users something more useful than `It Broke`._
-- Keep in mind users will have saved [outdated versions of your Step](#workflows-using-out-dated-versions-of-your-step) - try to keep them supported without breaking their Workflows.
+* Catch all exceptions/errors during your `step execution` functions to send `fail().`
+  * _An execution will keep running until receiving `complete` or `fail`, so if you hit an error in the middle and aren't catching it, your users will end up with a bunch of in-progress executions in their analytics with no error messages._
+* Give descriptive error messages to users of your Step.
+  * _There_ [_doesn't appear to be a limit_](#workflow-error-message-limitations) _on how many characters you can send back in your `fail()`, so provide your users something more useful than `It Broke`._
+* Keep in mind users will have saved [outdated versions of your Step](#workflows-using-out-dated-versions-of-your-step) - try to keep them supported without breaking their Workflows.
+
+## Workflow Builder IDs
+
+There are a variety of IDs you get back from Workflow-related events, though not all of them super well documented. The following is what I've gleaned from trial and error, so feel free to send in corrections/edits.
+
+- **workflow_step_execute_id**
+  - The unique execution id tied to the event that arrived. Only allowed to send _Complete/Fail_ once per each, otherwise it will respond with an error. Your Workflow will block `In Progress` until this ID has been finished.
+- **workflow_id**
+  - The unique Workflow in your dashboard. Link to it from within your Step/messages using `https://app.slack.com/workflow-builder/< team_id >/workflow/< workflow_id >/activity`.
+- **workflow_instance_id**
+  - 🤔 From what I can infer, this is the unique run of a Workflow, e.g. each time I start my Workflow from a shortcut, it will have a new `workflow_instance_id` but the same `workflow_id`.
+- **step_id**
+  - The instance of your Step registered as a part of the `workflow_id`.
+
+#### Sample Workflow Execute event
+
+The classic and ever handy [`workflow_step_execute`](https://api.slack.com/events/workflow_step_execute) event.
+
+    {
+        "token": "XXYYZZ",
+        "team_id": "TXXXXXXXX",
+        "enterprise_id": "EXXXXXXXX",
+        "api_app_id": "AXXXXXXXX",
+        "event": {
+            "type": "workflow_step_execute",
+            "callback_id": "open_ticket",
+            "workflow_step": {
+                "workflow_step_execute_id": "1036669284371.19077474947.c94bcf942e047298d21f89faf24f1326",
+                "workflow_id": "427766349637366512",
+                "workflow_instance_id": "449215073169191811",
+                "step_id": "5c7487e9-0cb8-446d-8d72-29a765bbd3ff",
+                "inputs": {
+                    "title": "Requesting help with my computer",
+                    "submitter": "W1234567890"
+                },
+                "outputs": []
+         ....
+     ....
 
 ## App setup
 
@@ -53,11 +86,11 @@ The first stage is handling when a user attempts to add your step to their workf
 
 ## Configuration modal
 
-- Users are able to pass information from previous steps using `inputs`
-- ![ℹ️](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==) Users will see an option to `Insert a variable` below any of your `plain-text input` blocks that you specify.
-- `inputs` and `outputs` are required arguments for `updateStep` - saves what data is required to come in, along with the array of what you promise to return.
-- Outputs
-  - Types available to us for now: `text`, `channel`, or `user`. Unfortunately, no numbers or interesting data structures, unless you get creative with parsing text in a future workflow step.
+* Users are able to pass information from previous steps using `inputs`
+* ![ℹ️](data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==) Users will see an option to `Insert a variable` below any of your `plain-text input` blocks that you specify.
+* `inputs` and `outputs` are required arguments for `updateStep` - saves what data is required to come in, along with the array of what you promise to return.
+* Outputs
+  * Types available to us for now: `text`, `channel`, or `user`. Unfortunately, no numbers or interesting data structures, unless you get creative with parsing text in a future workflow step.
 
 ## How to update a Step modal
 
@@ -126,9 +159,9 @@ An execution has to eventually send a `complete()` or `fail()`, but how long can
 
 With a window on the order of `days` rather than `seconds`, it opens up new possibilities. Human-time-scale tasks suddenly become a possibility in your Workflows:
 
-- Waiting for manual approval from a human
-- Waiting for a batch service/data ETL to run, then continue once a success webhook is received _(you'd have to configure these separately from the core Webhook-triggered Workflows._)
-- Heck, I could mail a letter with the execution ID and have my friend complete it when it gets to him. The **USPS Step 📬!**
+* Waiting for manual approval from a human
+* Waiting for a batch service/data ETL to run, then continue once a success webhook is received _(you'd have to configure these separately from the core Webhook-triggered Workflows._)
+* Heck, I could mail a letter with the execution ID and have my friend complete it when it gets to him. The **USPS Step 📬!**
 
 The sky is the limit!
 
@@ -136,8 +169,8 @@ The sky is the limit!
 
 Can Workflow error messages include Markdown? How long can they be?
 
-- Sadly, no. You can only pass `plain_text` errors back to users to show in their Analytics page. Emojis work though! 😅
-- In my testing, I was able to send `3800` characters without it breaking, so length is no excuse for not giving descriptive and useful error messages.
+* Sadly, no. You can only pass `plain_text` errors back to users to show in their Analytics page. Emojis work though! 😅
+* In my testing, I was able to send `3800` characters without it breaking, so length is no excuse for not giving descriptive and useful error messages.
 
 ## What happens to Workflows if my Step server is down?
 
@@ -145,10 +178,10 @@ From what I can tell, it seems like they get marked as `In progress` in the Work
 
 ## Workflows using out-dated versions of your Step
 
-Once a workflow step is built, you will find yourself with users who built Workflows on old `inputs/outputs` schema from any point in your Step's history. If you are actively developing your Step while it's in-use _(especially changing variable names, adding new `inputs`, etc)_ you may end up with events missing **required*- inputs in your newer schemas! So far I see two options to handle it:
+Once a workflow step is built, you will find yourself with users who built Workflows on old `inputs/outputs` schema from any point in your Step's history. If you are actively developing your Step while it's in-use _(especially changing variable names, adding new `inputs`, etc)_ you may end up with events missing *_required_- inputs in your newer schemas! So far I see two options to handle it:
 
-- 🧘‍♀️Support the old schema to the absolute best of your ability.
-- ❌fail the step and send the user a message telling them to upgrade. This seems like a very bull-headed approach, and not recommended.
+* 🧘‍♀️Support the old schema to the absolute best of your ability.
+* ❌fail the step and send the user a message telling them to upgrade. This seems like a very bull-headed approach, and not recommended.
 
 In some cases you may have no choice but to poke the user to update, but that's a path to mega frustration, and to be avoided if possible.
 
@@ -160,9 +193,9 @@ Not much to back this up, but I have a strong feeling that Workflow Builder is b
 
 Workflow Builder is a pleasure to work with, though there are a few things I'd like to see in the future.
 
-- **Low discoverability of Steps**
-  - As it stands, you won't be getting any user acquisition from `that's a cool step -> finds your app -> installs it`. There's no place for users to discover Steps that could be useful for them. Would love for their to be a way to have Steps be a benefit for discovery of Slack App SaaS. Maybe an extension of the App Directory?
-  - This might only be a concern for external SaaS companies built on Slack, since the use case of `I want to send a ticket to Jira` (or similar) would have a very clear app you'd want to have that Step.
-- **No central commmunity templates**
-  - It seems like there would be a spot to search templates from within Workflow Builder, but there's just a few default Slack ones. Users are building all these cool Workflows at different companies and don't have a place to share them. I've started [pulling together some resources](/docs/slack/workflow-builder-templates/), but that's a drop in the bucket vs how many are probably out there.
-- 
+* **Low discoverability of Steps**
+  * As it stands, you won't be getting any user acquisition from `that's a cool step -> finds your app -> installs it`. There's no place for users to discover Steps that could be useful for them. Would love for their to be a way to have Steps be a benefit for discovery of Slack App SaaS. Maybe an extension of the App Directory?
+  * This might only be a concern for external SaaS companies built on Slack, since the use case of `I want to send a ticket to Jira` (or similar) would have a very clear app you'd want to have that Step.
+* **No central commmunity templates**
+  * It seems like there would be a spot to search templates from within Workflow Builder, but there's just a few default Slack ones. Users are building all these cool Workflows at different companies and don't have a place to share them. I've started [pulling together some resources](/docs/slack/workflow-builder-templates/), but that's a drop in the bucket vs how many are probably out there.
+*
